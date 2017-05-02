@@ -27,8 +27,15 @@ public class MST implements Network {
             this.groups[j] = j;
         }
 
-        // beginning of the Kruskal's Algorithm
+        this.makeMST();
+    }
 
+    private Map<Integer, Vertex> verticeMap = new HashMap<>();
+    private List<Edge> edges = null;
+    private int[] groups = null;
+
+    private void makeMST() {
+        // beginning of the Kruskal's Algorithm
         Collections.sort(this.edges, new Ascending());
 
         Edge e;
@@ -44,10 +51,6 @@ public class MST implements Network {
             }
         }
     }
-
-    private Map<Integer, Vertex> verticeMap = new HashMap<>();
-    private List<Edge> edges = null;
-    private int[] groups = null;
 
     class Ascending implements Comparator<Edge> {   // compared by distance
         @Override
