@@ -8,7 +8,7 @@ public class MST implements Network {
 
     public List<Edge> minimumSpanningTree = null;
 
-    public MST(Graph g) {
+    public MST(GraphImpl g) {
         int i = 0;
         for(Vertex v : g.vertices) {    // make vertice hashmap to find vertex faster
             v.index = i++;  // keep a index from the ArrayList
