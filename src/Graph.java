@@ -4,16 +4,16 @@ import java.util.List;
 /**
  * Created by Shin on 2017-05-02.
  */
-public class GraphImpl implements Network{
+public class Graph {
     public Vertex[] vertices;
     public List<Edge> edges;
 
-    public GraphImpl() {
+    public Graph() {
         this.vertices = null;
         this.edges = null;
     }
 
-    public GraphImpl(int[][] coords) {
+    public Graph(int[][] coords) {
         this.setVertices(coords);
         this.updateEdge();   // edges are depend on vertices
     }
